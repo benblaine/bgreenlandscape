@@ -264,3 +264,9 @@ img { max-width: 100%; }
   .nav-links.open { display: flex; flex-direction: column; position: absolute; top: 88px; left: 0; right: 0; background: var(--bg); padding: 20px 32px; z-index: 20; border-bottom: 1px solid var(--border-divider); }
   .nav-toggle { display: block; }
 }
+
+/* Generic responsive fallback for inline-styled grid layouts on secondary pages */
+@media (max-width: 860px) {
+  [style*="grid-template-columns"] { grid-template-columns: 1fr !important; }
+  header img[style*="object-fit"] { height: 280px !important; }
+}
